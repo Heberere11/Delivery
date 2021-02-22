@@ -568,7 +568,7 @@ while (opcao1 == 1) or (opcao1 == 2):
         except ValueError:
           print("macacos me mordem vc errou comando")
           opcao2 = int(input("   Qual a opção desjada? ")) #Essa infiormação serve para pegar o sentido de para quem é para abrir a aba
-
+#kkkkkk eu foi dificil
         #Caso em que o usuário digita um número inválido
           while (opcao2 != 1) and (opcao2 != 2):
                 print ("================================")
