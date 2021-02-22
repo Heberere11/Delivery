@@ -553,19 +553,31 @@ while (opcao1 == 1) or (opcao1 == 2):
         print ("       Fazer log-in como:")
         print ("   1-Cliente;\n   2-Funcinario;")
         print ("--------------------------------")
-        
-        opcao2 = int(input("   Qual a opção desjada? ")) #Essa infiormação serve para pegar o sentido de para quem é para abrir a aba
+        try:
+          opcao2 = int(input("   Qual a opção desjada? ")) #Essa infiormação serve para pegar o sentido de para quem é para abrir a aba
 
         #Caso em que o usuário digita um número inválido
-        while (opcao2 != 1) and (opcao2 != 2):
-            print ("================================")
-            print ("        OPÇÃO INVÁLIDA")
-            print ("================================")
-            print ("       Fazer log-in como:")
-            print ("   1-Cliente;\n   2-Funcinario;")
-            print ("--------------------------------")
-            opcao2 = int(input("   Qual a opção desjada? "))
-        
+          while (opcao2 != 1) and (opcao2 != 2):
+              print ("================================")
+              print ("        OPÇÃO INVÁLIDA")
+              print ("================================")
+              print ("       Fazer log-in como:")
+              print ("   1-Cliente;\n   2-Funcinario;")
+              print ("--------------------------------")
+              opcao2 = int(input("   Qual a opção desjada? "))
+        except ValueError:
+          print("macacos me mordem vc errou comando")
+          opcao2 = int(input("   Qual a opção desjada? ")) #Essa infiormação serve para pegar o sentido de para quem é para abrir a aba
+
+        #Caso em que o usuário digita um número inválido
+          while (opcao2 != 1) and (opcao2 != 2):
+                print ("================================")
+                print ("        OPÇÃO INVÁLIDA")
+                print ("================================")
+                print ("       Fazer log-in como:")
+                print ("   1-Cliente;\n   2-Funcinario;")
+                print ("--------------------------------")
+                opcao2 = int(input("   Qual a opção desjada? "))
         #Preenchimento do usuário e da senha para verificação
         user = input("   Digite o seu usuário: ")
         senha = input("   Digite a sua senha: ")
