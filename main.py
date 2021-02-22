@@ -595,7 +595,7 @@ while (opcao1 == 1) or (opcao1 == 2):
         #Caso exista um cadastro com os dados disponibilizados
         print ("--------------------------------")
         print (" Log-in realizado com sucesso!!")
-
+#kapo kapo
         #Abertura da Aba para Cliente
         if opcao2 == 1:
             print ("================================")
