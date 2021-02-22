@@ -85,7 +85,7 @@ class Pessoa(ABC):
             print ("           Alterar...")
             print ("   1-usuario;\n   2-senha;\n   3-nome;\n   4-contato;\n   5-e-mail.")
             print ("--------------------------------")
-
+        print("deu problema meu caro")
         #Condições para a excução e como se dará essa alteração
         if opcao == 1: #Alteração do user
             x = 0
@@ -478,10 +478,10 @@ print ("================================")
 print ("      Escolha uma das opções")
 print ("   1-Fazer Cadastro; \n   2-Fazer Log-in.")
 print ("--------------------------------")
-opcao1 = int(input("   Qual a opção desjada? "))
+try:
+  opcao1 = int(input("   Qual a opção desjada? "))
 
-#Caso em que o usuário digita um número inválido
-while (opcao1 != 1) and (opcao1 != 2):
+  while (opcao1 != 1) and (opcao1 != 2):
     print ("================================")
     print ("        OPÇÃO INVÁLIDA")
     print ("================================")
@@ -489,7 +489,17 @@ while (opcao1 != 1) and (opcao1 != 2):
     print ("   1-Fazer Cadastro; \n   2-Fazer Log-in.")
     print ("--------------------------------")
     opcao1 = int(input("   Qual a opção desjada? "))
-
+except ValueError:
+  print("   MENOR TÁ ERRADO ISSO AI PÓ")
+  opcao1 = int(input("   Qual a opção desjada? "))
+  while (opcao1 != 1) and (opcao1 != 2):
+    print ("================================")
+    print ("        OPÇÃO INVÁLIDA")
+    print ("================================")
+    print ("      Escolha uma das opções")
+    print ("   1-Fazer Cadastro; \n   2-Fazer Log-in.")
+    print ("--------------------------------")
+    opcao1 = int(input("   Qual a opção desjada? "))
 #Caso em que o usuário digita um número válido
 while (opcao1 == 1) or (opcao1 == 2):
 
