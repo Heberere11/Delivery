@@ -511,21 +511,39 @@ while (opcao1 == 1) or (opcao1 == 2):
         print ("    Você será um:?")
         print ("   1-Funcionàrio\n   2-Cliente ")
         print ("--------------------------------")
-        posicao = int(input("   Qual a opção desejada: "))
-        if posicao == 2:
-            cliente1.cadastrar(cadastros, senhas) #"Criação" de um objeto cliente
-        else:
+        try:
+          posicao = int(input("   Qual a opção desejada: "))
+      
+          if posicao == 2:
+              cliente1.cadastrar(cadastros, senhas) #"Criação" de um objeto cliente
+          else:
             
-            print ("   Qual cargo você vai ocupar?")
-            print("   1-Atendente\n   2-Entregador")
-            cargo = int(input("   Qual a opção desejada: "))
-            if cargo == 1:
+              print ("   Qual cargo você vai ocupar?")
+              print("   1-Atendente\n   2-Entregador")
+              cargo = int(input("   Qual a opção desejada: "))
+              if cargo == 1:
                 atendente1.cadastrar(cadastros, senhas) #"Criação" de um objeto atendente
-            else:
+              else:
                 entregador1.cadastrar(cadastros, senhas) #"Criação" de um objeto entregador
-        print ("--------------------------------")
-        print ("       Cadastro feito com\n           sucesso!!")
-
+          print ("--------------------------------")
+          print ("       Cadastro feito com\n           sucesso!!")
+        except ValueError:
+          print("menor está incorreto tá?! cansado")
+          posicao = int(input("   Qual a opção desejada: "))
+      
+          if posicao == 2:
+              cliente1.cadastrar(cadastros, senhas) #"Criação" de um objeto cliente
+          else:
+            
+              print ("   Qual cargo você vai ocupar?")
+              print("   1-Atendente\n   2-Entregador")
+              cargo = int(input("   Qual a opção desejada: "))
+              if cargo == 1:
+                atendente1.cadastrar(cadastros, senhas) #"Criação" de um objeto atendente
+              else:
+                entregador1.cadastrar(cadastros, senhas) #"Criação" de um objeto entregador
+          print ("--------------------------------")
+          print ("       Cadastro feito com\n           sucesso!!")
     elif opcao1 == 2:
         
         #Criação do Método para a área destinada ao Log-in do usuário
