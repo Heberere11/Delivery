@@ -75,16 +75,35 @@ class Pessoa(ABC):
         print ("           Alterar...")
         print ("   1-usuario;\n   2-senha;\n   3-nome;\n   4-contato;\n   5-e-mail.")
         print ("--------------------------------")
-        opcao = int(input("   Qual a opção desjada? "))
+        try:
+          opcao = int(input("   Qual a opção desjada? "))
 
-        #Caso em que o usuário digitou um número inválido
-        while (opcao != 1) and (opcao != 2) and (opcao != 3) and (opcao != 4) and (opcao != 5):
+          #Caso em que o usuário digitou um número inválido
+          while (opcao != 1) and (opcao != 2) and (opcao != 3) and (opcao != 4) and (opcao != 5):
             print ("================================")
             print ("        OPÇÃO INVÁLIDA")
             print ("================================")
             print ("           Alterar...")
             print ("   1-usuario;\n   2-senha;\n   3-nome;\n   4-contato;\n   5-e-mail.")
             print ("--------------------------------")
+            opcao = int(input("   Qual a opção desjada? "))
+
+        except ValueError:
+          print ("================================")
+          print ("  VALOR DIGITADO INDISPONÍVEL")
+          print ("================================")
+          print ("           Alterar...")
+          print ("   1-usuario;\n   2-senha;\n   3-nome;\n   4-contato;\n   5-e-mail.")
+          print ("--------------------------------")
+          opcao = int(input("   Qual a opção desjada? "))
+          while (opcao != 1) and (opcao != 2) and (opcao != 3) and (opcao != 4) and (opcao != 5):
+            print ("================================")
+            print ("        OPÇÃO INVÁLIDA")
+            print ("================================")
+            print ("           Alterar...")
+            print ("   1-usuario;\n   2-senha;\n   3-nome;\n   4-contato;\n   5-e-mail.")
+            print ("--------------------------------")
+            opcao = int(input("   Qual a opção desjada? "))
 
         #Condições para a excução e como se dará essa alteração
         if opcao == 1: #Alteração do user
@@ -174,10 +193,11 @@ class Funcionario(Pessoa, ABC):
         print ("           Alterar...")
         print ("   1-usuario;\n   2-senha;\n   3-nome;\n   4-contato;\n   5-e-mail;\n   6-loja.")
         print ("--------------------------------")
-        opcao = int(input("   Qual a opção desjada? "))
+        try:
+          opcao = int(input("   Qual a opção desjada? "))
 
-        #Caso em que o usuário digitou um número inválido
-        while (opcao != 1) and (opcao != 2) and (opcao != 3) and (opcao != 4) and (opcao != 5) and (opcao != 6):
+          #Caso em que o usuário digitou um número inválido
+          while (opcao != 1) and (opcao != 2) and (opcao != 3) and (opcao != 4) and (opcao != 5) and (opcao != 6):
             print ("================================")
             print ("        OPÇÃO INVÁLIDA")
             print ("================================")
@@ -185,6 +205,22 @@ class Funcionario(Pessoa, ABC):
             print ("   1-usuario;\n   2-senha;\n   3-nome;\n   4-contato;\n   5-e-mail;\n   6-loja.")
             print ("--------------------------------")
 
+        except ValueError:
+          print ("================================")
+          print ("  VALOR DIGITADO INDISPONÍVEL")
+          print ("================================")
+          print ("           Alterar...")
+          print ("   1-usuario;\n   2-senha;\n   3-nome;\n   4-contato;\n   5-e-mail;\n   6-loja.")
+          print ("--------------------------------")
+          opcao = int(input("   Qual a opção desjada? "))
+          while (opcao != 1) and (opcao != 2) and (opcao != 3) and (opcao != 4) and (opcao != 5):
+            print ("================================")
+            print ("        OPÇÃO INVÁLIDA")
+            print ("================================")
+            print ("           Alterar...")
+            print ("   1-usuario;\n   2-senha;\n   3-nome;\n   4-contato;\n   5-e-mail;\n   6-loja.")
+            print ("--------------------------------")
+            opcao = int(input("   Qual a opção desjada? "))
 
         #Condições para a excução e como se dará essa alteração
         if opcao == 1: #Alteração do user
@@ -292,16 +328,34 @@ class Entregador(Funcionario):
         print ("           Alterar...")
         print ("   1-usuario;\n   2-senha;\n   3-nome;\n   4-contato;\n   5-e-mail;\n   6-loja;\n   7-locomoção;\n   8-placa.")
         print ("--------------------------------")
-        opcao = int(input("   Qual a opção desjada? "))
-        
-        #Caso em que o usuário digitou um número inválido
-        while (opcao != 1) and (opcao != 2) and (opcao != 3) and (opcao != 4) and (opcao != 5) and (opcao != 6) and (opcao != 7) and (opcao != 8):
+        try:
+          opcao = int(input("   Qual a opção desjada? "))
+
+          #Caso em que o usuário digitou um número inválido
+          while (opcao != 1) and (opcao != 2) and (opcao != 3) and (opcao != 4) and (opcao != 5) and (opcao != 6) and (opcao != 7) and (opcao != 8):
             print ("================================")
             print ("        OPÇÃO INVÁLIDA")
             print ("================================")
             print ("           Alterar...")
             print ("   1-usuario;\n   2-senha;\n   3-nome;\n   4-contato;\n   5-e-mail\n   6-loja;\n   7-locomoção;\n   8-placa.")
             print ("--------------------------------")
+
+        except ValueError:
+          print ("================================")
+          print ("  VALOR DIGITADO INDISPONÍVEL")
+          print ("================================")
+          print ("           Alterar...")
+          print ("   1-usuario;\n   2-senha;\n   3-nome;\n   4-contato;\n   5-e-mail;\n   6-loja;\n   7-locomoção;\n   8-placa.")
+          print ("--------------------------------")
+          opcao = int(input("   Qual a opção desjada? "))
+          while (opcao != 1) and (opcao != 2) and (opcao != 3) and (opcao != 4) and (opcao != 5):
+            print ("================================")
+            print ("        OPÇÃO INVÁLIDA")
+            print ("================================")
+            print ("           Alterar...")
+            print ("   1-usuario;\n   2-senha;\n   3-nome;\n   4-contato;\n   5-e-mail;\n   6-loja;\n   7-locomoção;\n   8-placa.")
+            print ("--------------------------------")
+            opcao = int(input("   Qual a opção desjada? "))
 
         #Condições para a excução e como se dará essa alteração
         if opcao == 1: #Alteração do user
@@ -396,19 +450,40 @@ class Produto:
         #Exibição do menun para a alteração dos valores
         print ("--------------------------------")
         print ("           Alterar...")
-        print ("   1-nome   2-valor;\n   3-validade.")
+        print ("   1-nome;\n  2-valor;\n   3-validade.")
         print ("--------------------------------")
-        opcao = int(input("   Qual a opção desjada? "))
+        try:
+          opcao = int(input("   Qual a opção desjada? "))
 
-        #Caso em que o usuário digite um número inválido
-        while (opcao != 1) and (opcao != 2) and (opcao != 3) and (opcao != 4):
+          #Caso em que o usuário digite um número inválido
+          while (opcao != 1) and (opcao != 2) and (opcao != 3) and (opcao != 4):
             print ("================================")
             print ("        OPÇÃO INVÁLIDA")
             print ("================================")
             print ("           Alterar...")
-            print ("   1-nome   2-valor;\n   3-validade.")
+            print ("   1-nome;\n   2-valor;\n   3-validade.")
             print ("--------------------------------")
-
+            opcao = int(input("   Qual a opção desjada? "))
+        
+        except ValueError:
+          print ("================================")
+          print ("  VALOR DIGITADO INDISPONÍVEL")
+          print ("================================")
+          print ("           Alterar...")
+          print ("   1-nome;\n   2-valor;\n   3-validade.")
+          print ("--------------------------------")
+          opcao = int(input("   Qual a opção desjada? "))
+          
+          #Caso em que o usuário digite um número inválido
+          while (opcao != 1) and (opcao != 2) and (opcao != 3) and (opcao != 4):
+            print ("================================")
+            print ("        OPÇÃO INVÁLIDA")
+            print ("================================")
+            print ("           Alterar...")
+            print ("   1-nome;\n   2-valor;\n   3-validade.")
+            print ("--------------------------------")
+            opcao = int(input("   Qual a opção desjada? "))
+        
         #Condições para a excução e como se dará essa alteração
         if opcao == 1: #Alterção do nome
             self.nome_pro = input("   Digite o novo nome: ")
@@ -478,10 +553,10 @@ print ("================================")
 print ("      Escolha uma das opções")
 print ("   1-Fazer Cadastro; \n   2-Fazer Log-in.")
 print ("--------------------------------")
-opcao1 = int(input("   Qual a opção desjada? "))
+try:
+  opcao1 = int(input("   Qual a opção desjada? "))
 
-#Caso em que o usuário digita um número inválido
-while (opcao1 != 1) and (opcao1 != 2):
+  while (opcao1 != 1) and (opcao1 != 2):
     print ("================================")
     print ("        OPÇÃO INVÁLIDA")
     print ("================================")
@@ -489,7 +564,17 @@ while (opcao1 != 1) and (opcao1 != 2):
     print ("   1-Fazer Cadastro; \n   2-Fazer Log-in.")
     print ("--------------------------------")
     opcao1 = int(input("   Qual a opção desjada? "))
-
+except ValueError:
+  print("   MENOR TÁ ERRADO ISSO AI PÓ")
+  opcao1 = int(input("   Qual a opção desjada? "))
+  while (opcao1 != 1) and (opcao1 != 2):
+    print ("================================")
+    print ("        OPÇÃO INVÁLIDA")
+    print ("================================")
+    print ("      Escolha uma das opções")
+    print ("   1-Fazer Cadastro; \n   2-Fazer Log-in.")
+    print ("--------------------------------")
+    opcao1 = int(input("   Qual a opção desjada? "))
 #Caso em que o usuário digita um número válido
 while (opcao1 == 1) or (opcao1 == 2):
 
@@ -501,21 +586,39 @@ while (opcao1 == 1) or (opcao1 == 2):
         print ("    Você será um:?")
         print ("   1-Funcionàrio\n   2-Cliente ")
         print ("--------------------------------")
-        posicao = int(input("   Qual a opção desejada: "))
-        if posicao == 2:
-            cliente1.cadastrar(cadastros, senhas) #"Criação" de um objeto cliente
-        else:
+        try:
+          posicao = int(input("   Qual a opção desejada: "))
+      
+          if posicao == 2:
+              cliente1.cadastrar(cadastros, senhas) #"Criação" de um objeto cliente
+          else:
             
-            print ("   Qual cargo você vai ocupar?")
-            print("   1-Atendente\n   2-Entregador")
-            cargo = int(input("   Qual a opção desejada: "))
-            if cargo == 1:
+              print ("   Qual cargo você vai ocupar?")
+              print("   1-Atendente\n   2-Entregador")
+              cargo = int(input("   Qual a opção desejada: "))
+              if cargo == 1:
                 atendente1.cadastrar(cadastros, senhas) #"Criação" de um objeto atendente
-            else:
+              else:
                 entregador1.cadastrar(cadastros, senhas) #"Criação" de um objeto entregador
-        print ("--------------------------------")
-        print ("       Cadastro feito com\n           sucesso!!")
-
+          print ("--------------------------------")
+          print ("       Cadastro feito com\n           sucesso!!")
+        except ValueError:
+          print("menor está incorreto tá?! cansado")
+          posicao = int(input("   Qual a opção desejada: "))
+      
+          if posicao == 2:
+              cliente1.cadastrar(cadastros, senhas) #"Criação" de um objeto cliente
+          else:
+            
+              print ("   Qual cargo você vai ocupar?")
+              print("   1-Atendente\n   2-Entregador")
+              cargo = int(input("   Qual a opção desejada: "))
+              if cargo == 1:
+                atendente1.cadastrar(cadastros, senhas) #"Criação" de um objeto atendente
+              else:
+                entregador1.cadastrar(cadastros, senhas) #"Criação" de um objeto entregador
+          print ("--------------------------------")
+          print ("       Cadastro feito com\n           sucesso!!")
     elif opcao1 == 2:
         
         #Criação do Método para a área destinada ao Log-in do usuário
@@ -525,19 +628,31 @@ while (opcao1 == 1) or (opcao1 == 2):
         print ("       Fazer log-in como:")
         print ("   1-Cliente;\n   2-Funcinario;")
         print ("--------------------------------")
-        
-        opcao2 = int(input("   Qual a opção desjada? ")) #Essa infiormação serve para pegar o sentido de para quem é para abrir a aba
+        try:
+          opcao2 = int(input("   Qual a opção desjada? ")) #Essa infiormação serve para pegar o sentido de para quem é para abrir a aba
 
         #Caso em que o usuário digita um número inválido
-        while (opcao2 != 1) and (opcao2 != 2):
-            print ("================================")
-            print ("        OPÇÃO INVÁLIDA")
-            print ("================================")
-            print ("       Fazer log-in como:")
-            print ("   1-Cliente;\n   2-Funcinario;")
-            print ("--------------------------------")
-            opcao2 = int(input("   Qual a opção desjada? "))
-        
+          while (opcao2 != 1) and (opcao2 != 2):
+              print ("================================")
+              print ("        OPÇÃO INVÁLIDA")
+              print ("================================")
+              print ("       Fazer log-in como:")
+              print ("   1-Cliente;\n   2-Funcinario;")
+              print ("--------------------------------")
+              opcao2 = int(input("   Qual a opção desjada? "))
+        except ValueError:
+          print("macacos me mordem vc errou comando")
+          opcao2 = int(input("   Qual a opção desjada? ")) #Essa infiormação serve para pegar o sentido de para quem é para abrir a aba
+#kkkkkk eu foi dificil
+        #Caso em que o usuário digita um número inválido
+          while (opcao2 != 1) and (opcao2 != 2):
+                print ("================================")
+                print ("        OPÇÃO INVÁLIDA")
+                print ("================================")
+                print ("       Fazer log-in como:")
+                print ("   1-Cliente;\n   2-Funcinario;")
+                print ("--------------------------------")
+                opcao2 = int(input("   Qual a opção desjada? "))
         #Preenchimento do usuário e da senha para verificação
         user = input("   Digite o seu usuário: ")
         senha = input("   Digite a sua senha: ")
@@ -555,7 +670,7 @@ while (opcao1 == 1) or (opcao1 == 2):
         #Caso exista um cadastro com os dados disponibilizados
         print ("--------------------------------")
         print (" Log-in realizado com sucesso!!")
-
+#kapo kapo
         #Abertura da Aba para Cliente
         if opcao2 == 1:
             print ("================================")
@@ -565,23 +680,38 @@ while (opcao1 == 1) or (opcao1 == 2):
             #seleção da ação a ser tomada
             print ("   1-Alterar dados;\n   2-Encerrar programa;")
             print ("--------------------------------")
-            opcao3 = int(input("   Qual a opção desjada? "))
+            try:
+              opcao3 = int(input("   Qual a opção desjada? "))
 
-            #Caso em que o usuário digita um número inválido
-            while (opcao3 != 1) and (opcao3 != 2):
+              #Caso em que o usuário digita um número inválido
+              while (opcao3 != 1) and (opcao3 != 2):
+                  print ("================================")
+                  print ("        OPÇÃO INVÁLIDA")
+                  print ("================================")
+                  print ("   1-Alterar dados;\n   2-Encerrar programa;")
+                  print ("--------------------------------")
+                  opcao3 = int(input("   Qual a opção desjada? "))
+            except ValueError:
+              print ("================================")
+              print ("  VALOR DIGITADO INDISPONÍVEL")
+              print ("================================")
+              print ("   1-Alterar dados;\n   2-Encerrar programa;")
+              print ("--------------------------------")
+              opcao3 = int(input("   Qual a opção desjada? "))
+              while (opcao3 != 1) and (opcao3 != 2):
                 print ("================================")
                 print ("        OPÇÃO INVÁLIDA")
                 print ("================================")
                 print ("   1-Alterar dados;\n   2-Encerrar programa;")
                 print ("--------------------------------")
                 opcao3 = int(input("   Qual a opção desjada? "))
-
+          
             #Execução da ação a ser tomada
             while (opcao3 == 1) and (opcao3 == 2):
                 if opcao3 == 1:
-                    cliente1.alterar_cadastro(cadastros, senhas)
+                  cliente1.alterar_cadastro(cadastros, senhas)
                 elif opcao3 == 2:
-                    exit()
+                  exit()
             else:
                 print ("================================")
                 print ("           ABA CLIENTE")
@@ -596,17 +726,27 @@ while (opcao1 == 1) or (opcao1 == 2):
             print ("       Qual cargo você ocupa?")
             print ("   1-Atendente;\n   2-Entregador;")
             print ("--------------------------------")
-            opcao4 = int(input("   Qual a opção desjada? "))
+            try:
+              opcao4 = int(input("   Qual a opção desjada? "))
 
-            #Caso em que o usuário digita um número inválido
-            while (opcao4 != 1) and (opcao4 != 2):
-                print ("================================")
-                print ("        OPÇÃO INVÁLIDA")
-                print ("================================")
-                print ("       Qual cargo você ocupa?")
-                print ("   1-Atendente;\n   2-Entregador;")
-                print ("--------------------------------")
-                opcao4 = int(input("   Qual a opção desjada? "))
+              #Caso em que o usuário digita um número inválido
+              while (opcao4 != 1) and (opcao4 != 2):
+                  print ("================================")
+                  print ("        OPÇÃO INVÁLIDA")
+                  print ("================================")
+                  print ("       Qual cargo você ocupa?")
+                  print ("   1-Atendente;\n   2-Entregador;")
+                  print ("--------------------------------")
+                  opcao4 = int(input("   Qual a opção desjada? "))
+            
+            except ValueError:
+              print ("================================")
+              print ("  VALOR DIGITADO INDISPONÍVEL")
+              print ("================================")
+              print ("       Qual cargo você ocupa?")
+              print ("   1-Atendente;\n   2-Entregador;")
+              print ("--------------------------------")
+              opcao4 = int(input("   Qual a opção desjada? "))
 
             #Abertura da aba Atendente
             while (opcao4 == 1) or (opcao4 == 2):
@@ -616,10 +756,26 @@ while (opcao1 == 1) or (opcao1 == 2):
                     print ("================================")
                     print ("   1-Alterar dados;\n   2--Cadastrar Produto;\n   3-Alterar dados de Produto;\n   4-Encerrar programa;")
                     print ("--------------------------------")
-                    opcao5 = int(input("   Qual a opção desjada? "))
-
-                    #Caso em que o usuário digita um número inválido
-                    while (opcao5 != 1) and (opcao5 != 2) and (opcao5 != 3) and (opcao5 != 4):
+                    try:
+                      opcao5 = int(input("   Qual a opção desjada? "))
+                      
+                      #Caso em que o usuário digita um número inválido
+                      while (opcao5 != 1) and (opcao5 != 2) and (opcao5 != 3) and (opcao5 != 4):
+                        print ("================================")
+                        print ("        OPÇÃO INVÁLIDA")
+                        print ("================================")
+                        print ("   1-Alterar dados;\n   2--Cadastrar Produto;\n   3-Alterar dados de Produto;\n   4-Encerrar programa.")
+                        print ("--------------------------------")
+                        opcao5 = int(input("   Qual a opção desjada? "))
+                    
+                    except ValueError:
+                      print ("================================")
+                      print ("  VALOR DIGITADO INDISPONÍVEL")
+                      print ("================================")
+                      print ("   1-Alterar dados;\n   2--Cadastrar Produto;\n   3-Alterar dados de Produto;\n   4-Encerrar programa;")
+                      print ("--------------------------------")
+                      opcao5 = int(input("   Qual a opção desjada? "))
+                      while (opcao5 != 1) and (opcao5 != 2) and (opcao5 != 3) and (opcao5 != 4):
                         print ("================================")
                         print ("        OPÇÃO INVÁLIDA")
                         print ("================================")
@@ -656,10 +812,29 @@ while (opcao1 == 1) or (opcao1 == 2):
                     print ("================================")
                     print ("   1-Alterar dados;\n   2-Encerrar programa.")
                     print ("--------------------------------")
-                    opcao5 = int(input("   Qual a opção desjada? "))
 
-                    #Caso em que o usuário digita um número inválido
-                    while (opcao5 != 1) and (opcao5 != 2):
+                    try:
+                      opcao5 = int(input("   Qual a opção desjada? "))
+
+                      #Caso em que o usuário digita um número inválido
+                      while (opcao5 != 1) and (opcao5 != 2):
+                        print ("================================")
+                        print ("        OPÇÃO INVÁLIDA")
+                        print ("================================")
+                        print ("   1-Alterar dados;\n   2-Encerrar programa.")
+                        print ("--------------------------------")
+                        opcao5 = int(input("   Qual a opção desjada? "))
+                      
+                    except ValueError:
+                      print ("================================")
+                      print ("  VALOR DIGITADO INDISPONÍVEL")
+                      print ("================================")
+                      print ("   1-Alterar dados;\n   2-Encerrar programa.")
+                      print ("--------------------------------")
+                      opcao5 = int(input("   Qual a opção desjada? "))
+                      
+                      #Caso em que o usuário digita um número inválido
+                      while (opcao5 != 1) and (opcao5 != 2):
                         print ("================================")
                         print ("        OPÇÃO INVÁLIDA")
                         print ("================================")
